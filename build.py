@@ -10,7 +10,7 @@ CONFIG = {
   "phone": "+974 3164 2726",
   "phone2": "+974 3164 2727",
   "whatsapp": "+97431642726",
-  "email": "dremora@gmail.com",
+  "email": "Dreamora974@gmail.com",
   "address": "Doha, State of Qatar",
   "hours": "Saturday – Thursday, 9:00 AM – 9:00 PM",
   "instagram": "https://www.instagram.com/dreamora__decor/",
@@ -68,7 +68,7 @@ def foot():
 <footer class="site"><div class="container">
   <div class="f-grid">
     <div class="f-brand">
-      <div class="name">Dreamora</div>
+      <a href="index.html" style="display:inline-block;background:#FEFBF6;border-radius:16px;padding:10px 14px;margin-bottom:8px"><img src="assets/img/logo.jpg" alt="Dreamora Decor logo" style="width:150px;height:auto"></a>
       <p style="margin:6px 0 14px">Design your dreams. Bespoke event décor for birthdays, baby showers, ceremonies, weddings and celebrations across Qatar.</p>
       <a href="{C['instagram']}" target="_blank" rel="noopener" style="display:inline-flex;gap:8px;align-items:center">{IG} @dreamora__decor</a>
     </div>
