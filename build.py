@@ -8,6 +8,7 @@ CONFIG = {
   "brand": "Dreamora Decor",
   "cr": "254750",
   "phone": "+974 3164 2726",
+  "phone2": "+974 3164 2727",
   "whatsapp": "+97431642726",
   "email": "dremora@gmail.com",
   "address": "Doha, State of Qatar",
@@ -49,7 +50,7 @@ def head(title, desc, page):
 <body>
 <div class="topbar"><div class="container">
   <span>CR No. {C['cr']} · {C['legal_name']}</span>
-  <span><a href="tel:{C['phone'].replace(' ','')}">{C['phone']}</a> · <a href="mailto:{C['email']}">{C['email']}</a></span>
+  <span><a href="tel:{C['phone'].replace(' ','')}">{C['phone']}</a> / <a href="tel:{C['phone2'].replace(' ','')}">{C['phone2']}</a> · <a href="mailto:{C['email']}">{C['email']}</a></span>
 </div></div>
 <header class="site"><div class="container">
   <a class="brand" href="index.html" aria-label="Dreamora home"><img src="assets/img/logo-mark.jpg" alt="Dreamora butterfly logo"><span><span class="name">Dreamora</span><small>Interior Decoration W.L.L.</small></span></a>
@@ -75,7 +76,7 @@ def foot():
     <div><h4>Policies</h4><ul>{''.join(f'<li><a href="{h}">{t}</a></li>' for h,t in LEGAL)}</ul></div>
     <div><h4>Company</h4>
       <p><strong style="color:#fff">{C['legal_name']}</strong><br>Commercial Registration No. {C['cr']}<br>{C['address']}</p>
-      <p style="margin-top:10px">Tel: <a href="tel:{C['phone'].replace(' ','')}">{C['phone']}</a><br>Email: <a href="mailto:{C['email']}">{C['email']}</a><br>{C['hours']}</p>
+      <p style="margin-top:10px">Tel: <a href="tel:{C['phone'].replace(' ','')}">{C['phone']}</a> / <a href="tel:{C['phone2'].replace(' ','')}">{C['phone2']}</a><br>Email: <a href="mailto:{C['email']}">{C['email']}</a><br>{C['hours']}</p>
     </div>
   </div>
   <div class="f-legal">
@@ -97,7 +98,7 @@ def page_head(eyebrow, title, sub, crumb):
 
 def legal_meta():
     return f'''<div class="meta"><strong>{C['legal_name']}</strong> · Commercial Registration No. {C['cr']} · {C['address']}<br>
-Email: <a href="mailto:{C['email']}">{C['email']}</a> · Tel: {C['phone']} · Last updated: {C['updated']}</div>'''
+Email: <a href="mailto:{C['email']}">{C['email']}</a> · Tel: {C['phone']} / {C['phone2']} · Last updated: {C['updated']}</div>'''
 
 ICON = {
  "cake":'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21h16M5 21v-7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v7M12 12V8M12 5.5c.8 0 1.2-.7 1.2-1.3S12 2 12 2s-1.2 1.6-1.2 2.2c0 .6.4 1.3 1.2 1.3zM5 16c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 5 0"/></svg>',
@@ -193,7 +194,7 @@ about = head("About Us","About Dreamora Interior Decoration W.L.L., a Qatar-regi
     <tr><th>Commercial Registration No.</th><td>{C['cr']}</td></tr>
     <tr><th>Legal form</th><td>Limited Liability Company (W.L.L.), State of Qatar</td></tr>
     <tr><th>Registered address</th><td>{C['address']}</td></tr>
-    <tr><th>Telephone</th><td>{C['phone']}</td></tr>
+    <tr><th>Telephone</th><td>{C['phone']}<br>{C['phone2']}</td></tr>
     <tr><th>Email</th><td>{C['email']}</td></tr>
     <tr><th>Working hours</th><td>{C['hours']}</td></tr>
   </table>
@@ -292,7 +293,7 @@ contact = head("Contact Us","Contact Dreamora Interior Decoration W.L.L. – pho
     <table class="t">
       <tr><th>CR No.</th><td>{C['cr']}</td></tr>
       <tr><th>Address</th><td>{C['address']}</td></tr>
-      <tr><th>Phone / WhatsApp</th><td><a href="tel:{C['phone'].replace(' ','')}">{C['phone']}</a></td></tr>
+      <tr><th>Phone</th><td><a href="tel:{C['phone'].replace(' ','')}">{C['phone']}</a> / <a href="tel:{C['phone2'].replace(' ','')}">{C['phone2']}</a></td></tr>
       <tr><th>Email</th><td><a href="mailto:{C['email']}">{C['email']}</a></td></tr>
       <tr><th>Instagram</th><td><a href="{C['instagram']}" target="_blank" rel="noopener">@dreamora__decor</a></td></tr>
       <tr><th>Hours</th><td>{C['hours']}</td></tr>
@@ -375,7 +376,7 @@ legal_page("privacy.html","Privacy Policy","How Dreamora Interior Decoration W.L
 <h2>9. Cookies</h2>
 <p>We use essential browser storage to remember your booking list. If analytics cookies are added, you will be informed and can disable them in your browser settings.</p>
 <h2>10. Contact</h2>
-<p>Data enquiries: {LN}, {C['address']} · <a href="mailto:{C['email']}">{C['email']}</a> · {C['phone']}.</p>
+<p>Data enquiries: {LN}, {C['address']} · <a href="mailto:{C['email']}">{C['email']}</a> · {C['phone']} / {C['phone2']}.</p>
 ''')
 
 legal_page("refund.html","Refund &amp; Cancellation Policy","Refund, return and cancellation policy for Dreamora event decoration bookings in Qatar.", f'''
@@ -398,7 +399,7 @@ legal_page("refund.html","Refund &amp; Cancellation Policy","Refund, return and 
 <h2>6. How refunds are paid</h2>
 <p>Approved refunds are made to the original payment method (card refunds via our payment provider, or bank transfer) in QAR within <strong>14 working days</strong> of approval. Your card issuer may take additional time to show the credit.</p>
 <h2>7. Contact</h2>
-<p>Refund and cancellation requests: <a href="mailto:{C['email']}">{C['email']}</a> · {C['phone']}.</p>
+<p>Refund and cancellation requests: <a href="mailto:{C['email']}">{C['email']}</a> · {C['phone']} / {C['phone2']}.</p>
 ''')
 
 legal_page("delivery.html","Delivery &amp; Setup Policy","Delivery, installation and dismantling policy for Dreamora décor across Qatar.", f'''
